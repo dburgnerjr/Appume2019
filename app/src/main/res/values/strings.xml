@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Appume</string>
+
+    <string-array name="main_menu">
+        <item>What is an Appume?</item>
+        <item>Who Am I?</item>
+        <item>Certifications</item>
+        <item>Skills</item>
+        <item>Education</item>
+        <item>Experience</item>
+        <item>Recommendations</item>
+        <item>Contact Me</item>
+    </string-array>
 </resources>

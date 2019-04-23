@@ -20,37 +20,26 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.appume_splash);
+        setContentView(R.layout.activity_main);
+
+        String[] strMainMenu = getResources().getStringArray(R.array.main_menu);
 
         // Get ListView object from xml
         lvView = (ListView) findViewById(R.id.appumeList);
 
-        // Defined Array values to show in ListView
-        String[] values = new String[] { "What is an Appume?",
-                "Who Am I?",
-                "Certifications",
-                "Skills",
-                "Education",
-                "Experience",
-                "Recommendations",
-                "Contact Me"
-        };
-
         // Define a new Adapter
         // First parameter - Context
         // Second parameter - Layout for the row
-        // Third parameter - ID of the TextView to which the data is written
-        // Forth - the Array of data
+        // Third parameter - the Array of data
 
         ArrayAdapter<String> adapter;
-        adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, android.R.id.text1, values);
-
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, strMainMenu);
 
         // Assign adapter to ListView
         lvView.setAdapter(adapter);
 
         // ListView Item Click Listener
+/*
         lvView.setOnItemClickListener(new OnItemClickListener() {
 
             @Override
@@ -64,7 +53,7 @@ public class MainActivity extends Activity {
                 String itemValue = (String) lvView.getItemAtPosition(position);
 
                 Intent newActivity;
-/*
+
                 switch( position ) {
                     case 0:
                         newActivity = new Intent(Appume.this, WhatIsAppume.class);
@@ -115,10 +104,11 @@ public class MainActivity extends Activity {
                         break;
 
                 }
-*/
+
             }
 
         });
+*/
     }
 
     @Override
