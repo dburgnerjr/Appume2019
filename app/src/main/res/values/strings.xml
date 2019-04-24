@@ -3,6 +3,8 @@
 
     <string name="detail_error_message">This data is not available</string>
     <string name="certifications">Certifications</string>
+    <string name="skills">Skills</string>
+    <string name="education">Education</string>
 
     <string-array name="main_menu">
         <item>What is an Appume?</item>
@@ -20,6 +22,24 @@
         <item>Active DoD Secret Clearance</item>
         <item>Oracle Certified Associate, Java SE 7 Programmmer</item>
         <item>Scaled Agile Framework (SAFe) 4 Practitioner</item>
+    </string-array>
+
+    <string-array name="skills">
+        <item>Programming Languages:  Java, JavaScript, Kotlin, PHP, Swift, C++, HTML, SQL, XML</item>
+        <item>Integrated Development Environments:  Eclipse, NetBeans, Android Studio, Xcode</item>
+        <item>Frameworks:  JQuery, JavaScript Object Notation (JSON), Java Server Pages (JSP),
+            Hibernate, Java Server Pages Standard Tag Libraries (JSTL), Spring MVC</item>
+        <item>Databases:  Oracle, MySQL, MongoDB, SQLite</item>
+        <item>Version Control:  GitHub, Subversion, Atlassian, CVS</item>
+    </string-array>
+
+    <string-array name="education">
+        <item>Android Developer Nanodegree\nUdacity\n2018
+        </item>
+        <item>M. S. Computer Science\nNorfolk State University\n2010
+        </item>
+        <item>B. S. Computer Science\nEast Tennessee State University\n2000
+        </item>
     </string-array>
 
 

@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -49,8 +48,22 @@ public class ListActivity extends Activity {
         switch (nPosition) {
             case 2:
                 strActivityList = getResources().getStringArray(R.array.certifications);
-                adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, strActivityList);
+                adapter = new ArrayAdapter<>(this, R.layout.list_activity_text_view, strActivityList);
                 tvActivityListHeader.setText(R.string.certifications);
+                lvActivityList.setAdapter(adapter);
+                break;
+
+            case 4:
+                strActivityList = getResources().getStringArray(R.array.skills);
+                adapter = new ArrayAdapter<>(this, R.layout.list_activity_text_view, strActivityList);
+                tvActivityListHeader.setText(R.string.skills);
+                lvActivityList.setAdapter(adapter);
+                break;
+
+            case 5:
+                strActivityList = getResources().getStringArray(R.array.education);
+                adapter = new ArrayAdapter<>(this, R.layout.list_activity_text_view, strActivityList);
+                tvActivityListHeader.setText(R.string.education);
                 lvActivityList.setAdapter(adapter);
                 break;
         }

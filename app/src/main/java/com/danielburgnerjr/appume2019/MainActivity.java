@@ -34,7 +34,7 @@ public class MainActivity extends Activity {
         // Third parameter - the Array of data
 
         ArrayAdapter<String> adapter;
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, strMainMenu);
+        adapter = new ArrayAdapter<>(this, R.layout.list_activity_text_view, strMainMenu);
 
         // Assign adapter to ListView
         lvView.setAdapter(adapter);
@@ -71,6 +71,8 @@ public class MainActivity extends Activity {
                         break;
 
                     case 2:
+                    case 4:
+                    case 5:
                         launchListActivity(position);
                         break;
 
@@ -81,19 +83,6 @@ public class MainActivity extends Activity {
                         startActivity(newActivity);
                         finish();
 */
-                        break;
-
-                    case 4:
-                        Toast.makeText(getApplicationContext(), "Coming soon", Toast.LENGTH_LONG).show();
-/*
-                        newActivity = new Intent(Appume.this, Education.class);
-                        startActivity(newActivity);
-                        finish();
-*/
-                        break;
-
-                    case 5:
-                        Toast.makeText(getApplicationContext(), "Coming soon", Toast.LENGTH_LONG).show();
 /*
                         newActivity = new Intent(Appume.this, Experience.class);
                         startActivity(newActivity);
