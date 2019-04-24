@@ -12,10 +12,11 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
-    ListView lvView;
+    private ListView lvView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +40,7 @@ public class MainActivity extends Activity {
         lvView.setAdapter(adapter);
 
         // ListView Item Click Listener
-/*
+
         lvView.setOnItemClickListener(new OnItemClickListener() {
 
             @Override
@@ -54,53 +55,77 @@ public class MainActivity extends Activity {
 
                 Intent newActivity;
 
-                switch( position ) {
+                switch(position) {
                     case 0:
-                        newActivity = new Intent(Appume.this, WhatIsAppume.class);
-                        startActivity(newActivity);
-                        finish();
+                        Toast.makeText(getApplicationContext(), "Coming soon", Toast.LENGTH_LONG).show();
+                        //newActivity = new Intent(Appume.this, WhatIsAppume.class);
+                        //startActivity(newActivity);
+                        //finish();
                         break;
 
                     case 1:
-                        newActivity = new Intent(Appume.this, WhoAmI.class);
-                        startActivity(newActivity);
-                        finish();
+                        Toast.makeText(getApplicationContext(), "Coming soon", Toast.LENGTH_LONG).show();
+                        //newActivity = new Intent(Appume.this, WhoAmI.class);
+                        //startActivity(newActivity);
+                        //finish();
                         break;
 
                     case 2:
-                        newActivity = new Intent(Appume.this, Certifications.class);
-                        startActivity(newActivity);
-                        finish();
+                        launchListActivity(position);
                         break;
 
                     case 3:
+                        Toast.makeText(getApplicationContext(), "Coming soon", Toast.LENGTH_LONG).show();
+/*
                         newActivity = new Intent(Appume.this, Skills.class);
                         startActivity(newActivity);
                         finish();
+*/
                         break;
 
                     case 4:
+                        Toast.makeText(getApplicationContext(), "Coming soon", Toast.LENGTH_LONG).show();
+/*
                         newActivity = new Intent(Appume.this, Education.class);
                         startActivity(newActivity);
                         finish();
+*/
                         break;
 
                     case 5:
+                        Toast.makeText(getApplicationContext(), "Coming soon", Toast.LENGTH_LONG).show();
+/*
                         newActivity = new Intent(Appume.this, Experience.class);
                         startActivity(newActivity);
                         finish();
+*/
                         break;
 
                     case 6:
+                        Toast.makeText(getApplicationContext(), "Coming soon", Toast.LENGTH_LONG).show();
+/*
                         newActivity = new Intent(Appume.this, Recommendations.class);
                         startActivity(newActivity);
                         finish();
+*/
                         break;
 
                     case 7:
+                        Toast.makeText(getApplicationContext(), "Coming soon", Toast.LENGTH_LONG).show();
+/*
                         newActivity = new Intent(Appume.this, ContactMe.class);
                         startActivity(newActivity);
                         finish();
+*/
+                        break;
+
+                    case 8:
+                        Toast.makeText(getApplicationContext(), "Coming soon", Toast.LENGTH_LONG).show();
+/*
+                        newActivity = new Intent(Appume.this, ContactMe.class);
+                        startActivity(newActivity);
+                        finish();
+*/
                         break;
 
                 }
@@ -108,7 +133,14 @@ public class MainActivity extends Activity {
             }
 
         });
-*/
+
+    }
+
+    private void launchListActivity(int nPosition) {
+        Intent intI = new Intent(this, ListActivity.class);
+        intI.putExtra(ListActivity.EXTRA_POSITION, nPosition);
+        startActivity(intI);
+        finish();
     }
 
     @Override

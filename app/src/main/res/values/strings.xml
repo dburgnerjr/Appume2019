@@ -1,14 +1,26 @@
 <resources>
     <string name="app_name">Appume</string>
 
+    <string name="detail_error_message">This data is not available</string>
+    <string name="certifications">Certifications</string>
+
     <string-array name="main_menu">
         <item>What is an Appume?</item>
         <item>Who Am I?</item>
         <item>Certifications</item>
+        <item>Android Projects</item>
         <item>Skills</item>
         <item>Education</item>
         <item>Experience</item>
         <item>Recommendations</item>
         <item>Contact Me</item>
     </string-array>
+
+    <string-array name="certifications">
+        <item>Active DoD Secret Clearance</item>
+        <item>Oracle Certified Associate, Java SE 7 Programmmer</item>
+        <item>Scaled Agile Framework (SAFe) 4 Practitioner</item>
+    </string-array>
+
+
 </resources>

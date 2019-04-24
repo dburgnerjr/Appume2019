@@ -23,6 +23,12 @@
             android:label="@string/app_name"
             android:theme="@style/ListViewStyle" >
         </activity>
+        <activity
+            android:name="com.danielburgnerjr.appume2019.ListActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppBaseTheme" >
+        </activity>
     </application>
 
 </manifest>
