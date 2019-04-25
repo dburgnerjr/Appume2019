@@ -2,6 +2,8 @@
     <string name="app_name">Appume</string>
 
     <string name="detail_error_message">This data is not available</string>
+    <string name="whatisappume">What is an Appume?</string>
+    <string name="whoami">Who Am I?</string>
     <string name="certifications">Certifications</string>
     <string name="skills">Skills</string>
     <string name="education">Education</string>
@@ -17,6 +19,16 @@
         <item>Recommendations</item>
         <item>Contact Me</item>
     </string-array>
+
+    <string name="whatisappumedetail">An appume is simply a resume reimagined as a mobile app.
+    It is an innovative way for me to showcase my skills and experience in an effort to land me
+    a job as a mobile developer.</string>
+
+    <string name="whoamidetail">I am a software engineer with eight years development experience
+    supporting military, governmental and commercial programs including the design, development, and
+    integration of computer software programs. A graduate of the Udacity Android Developer nanodegree
+    program, I am looking to pivot into the mobile development space as either an Android or iOS
+        developer or both as I have published apps to the Play Store and the App Store.</string>
 
     <string-array name="certifications">
         <item>Active DoD Secret Clearance</item>

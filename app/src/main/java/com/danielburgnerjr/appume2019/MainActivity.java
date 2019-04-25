@@ -47,27 +47,13 @@ public class MainActivity extends Activity {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
 
-                // ListView Clicked item index
-                int itemPosition = position;
-
                 // ListView Clicked item value
                 String itemValue = (String) lvView.getItemAtPosition(position);
 
-                Intent newActivity;
-
                 switch(position) {
                     case 0:
-                        Toast.makeText(getApplicationContext(), "Coming soon", Toast.LENGTH_LONG).show();
-                        //newActivity = new Intent(Appume.this, WhatIsAppume.class);
-                        //startActivity(newActivity);
-                        //finish();
-                        break;
-
                     case 1:
-                        Toast.makeText(getApplicationContext(), "Coming soon", Toast.LENGTH_LONG).show();
-                        //newActivity = new Intent(Appume.this, WhoAmI.class);
-                        //startActivity(newActivity);
-                        //finish();
+                        launchDetailActivity(position);
                         break;
 
                     case 2:
@@ -123,6 +109,13 @@ public class MainActivity extends Activity {
 
         });
 
+    }
+
+    private void launchDetailActivity(int nPosition) {
+        Intent intI = new Intent(this, DetailActivity.class);
+        intI.putExtra(DetailActivity.EXTRA_POSITION, nPosition);
+        startActivity(intI);
+        finish();
     }
 
     private void launchListActivity(int nPosition) {
