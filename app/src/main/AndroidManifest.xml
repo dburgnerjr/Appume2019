@@ -35,6 +35,18 @@
             android:label="@string/app_name"
             android:theme="@style/AppBaseTheme" >
         </activity>
+        <activity
+            android:name="com.danielburgnerjr.appume2019.ClickListActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppBaseTheme" >
+        </activity>
+        <activity
+            android:name="com.danielburgnerjr.appume2019.RecommendationActivity"
+            android:parentActivityName=".ClickListActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppBaseTheme" >
+        </activity>
     </application>
 
 </manifest>

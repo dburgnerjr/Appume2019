@@ -5,8 +5,12 @@
     <string name="whatisappume">What is an Appume?</string>
     <string name="whoami">Who Am I?</string>
     <string name="certifications">Certifications</string>
+    <string name="androidprojects">Android Projects</string>
     <string name="skills">Skills</string>
     <string name="education">Education</string>
+    <string name="experience">Experience</string>
+    <string name="recommendations">Recommendations</string>
+    <string name="contactme">Contact Me</string>
 
     <string-array name="main_menu">
         <item>What is an Appume?</item>
@@ -36,6 +40,13 @@
         <item>Scaled Agile Framework (SAFe) 4 Practitioner</item>
     </string-array>
 
+    <string-array name="android_projects">
+        <item>GoodForce Demo</item>
+        <item>Popular Movies</item>
+        <item>TSA Randomizer</item>
+        <item>Flipulator</item>
+    </string-array>
+
     <string-array name="skills">
         <item>Programming Languages:  Java, JavaScript, Kotlin, PHP, Swift, C++, HTML, SQL, XML</item>
         <item>Integrated Development Environments:  Eclipse, NetBeans, Android Studio, Xcode</item>
@@ -54,5 +65,65 @@
         </item>
     </string-array>
 
+    <string-array name="experience">
+        <item>Java Developer – Octpber 2017 - Present</item>
+        <item>Java Developer – August 2017 - October 2017</item>
+        <item>Software Systems Engineer – April 2016 – May 2017</item>
+        <item>Software Engineer – October 2014 - November 2015</item>
+        <item>Programmer – March 2014 - October 2014</item>
+        <item>Software Engineer – July 2012 - August 2013</item>
+        <item>Software Engineer I – October 2011 - June 2012</item>
+        <item>Patent Examiner – January 2011 - September 2011</item>
+        <item>Laboratory Assistant - January 2010 - August 2010</item>
+    </string-array>
+
+    <string-array name="recommendations">
+        <item>Reno McCormick</item>
+        <item>David Dennis</item>
+        <item>Frank M. Bird</item>
+        <item>Lee Ash</item>
+    </string-array>
+
+    <string-array name="recommendation_details">
+        <item>{\"name\":{\"manager\":\"Reno McCormick\",\"recommendationText\":\"Daniel and I worked on a Java-based web
+            application for about a year. In that time I found his depth of knowledge and willingness to go the extra mile
+            to be of extreme importance to the success of our project. Daniel identified and corrected several hundred
+            deprecated Java classes, and helped to improve the performance of the web application. He was a valued employee,
+            and I enjoyed working with Daniel.\"}}
+        </item>
+        <item>
+            {\"name\":{\"manager\":\"David Dennis\",\"recommendationText\":\"I highly recommend Daniel Burgner for employment.
+            Daniel was employed by Xcelerate Solutions as a Java developer/systems engineer from 2016 to 2017. Daniel was
+            responsible for sustainment support for a classified system, including system administration, troubleshooting,
+            patching, updating and enhancements utilizing JAVA and Oracle tools.\nDaniel has been an excellent employee. In
+            addition, he is extremely organized, reliable and modern technology literate. Daniel can work independently and
+            is able to follow through to ensure that the job gets done. He is flexible and willing to work on any project that
+            is assigned to him.\nDaniel would be a tremendous asset for any company and has my highest recommendation. If you
+            have any further questions with regard to his background or qualifications, please do not hesitate to contact me.\n
+            Sincerely,\nDave Dennis\nVice President\nXcelerate Solutions\"}}
+        </item>
+        <item>
+            {\"name\":{\"manager\":\"Frank M. Bird\",\"recommendationText\":\"Daniel is a very skilled developer. He was brought
+            in to help maintain/upgrade a system written by other programmers. The system code was complex and difficult to
+            follow. He quickly learned the system logic and was able to make meaningful contributions. I would recommend him
+            without reservation.\"}}
+        </item>
+        <item>
+            {\"name\":{\"manager\":\"Lee Ash\",\"recommendationText\":\"Daniel has worked with me to resolve program issues
+            quickly and efficiently. He has learned the database and has been very helpful in resolving issues as they arise.\"}}
+        </item>
+    </string-array>
+
+    <string-array name="contact_me">
+        <item>Email Address:  dburgnerjr@yahoo.com</item>
+        <item>Phone Number:  1-757-202-5849</item>
+        <item>LinkedIn:  https://www.linkedin.com/in/dburgnerjr</item>
+        <item>GitHub:  https://www.github.com/dburgnerjr</item>
+        <item>Stack Overflow:  https://stackoverflow.com/users/5111305/daniel-burgner</item>
+        <item>Twitter:  https://www.twitter.com/dburgnerjr</item>
+        <item>Google Play Store</item>
+        <item>Rate This App</item>
+        <item>Share This App</item>
+    </string-array>
 
 </resources>

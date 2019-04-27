@@ -47,9 +47,6 @@ public class MainActivity extends Activity {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
 
-                // ListView Clicked item value
-                String itemValue = (String) lvView.getItemAtPosition(position);
-
                 switch(position) {
                     case 0:
                     case 1:
@@ -63,46 +60,11 @@ public class MainActivity extends Activity {
                         break;
 
                     case 3:
-                        Toast.makeText(getApplicationContext(), "Coming soon", Toast.LENGTH_LONG).show();
-/*
-                        newActivity = new Intent(Appume.this, Skills.class);
-                        startActivity(newActivity);
-                        finish();
-*/
-/*
-                        newActivity = new Intent(Appume.this, Experience.class);
-                        startActivity(newActivity);
-                        finish();
-*/
-                        break;
-
                     case 6:
-                        Toast.makeText(getApplicationContext(), "Coming soon", Toast.LENGTH_LONG).show();
-/*
-                        newActivity = new Intent(Appume.this, Recommendations.class);
-                        startActivity(newActivity);
-                        finish();
-*/
-                        break;
-
                     case 7:
-                        Toast.makeText(getApplicationContext(), "Coming soon", Toast.LENGTH_LONG).show();
-/*
-                        newActivity = new Intent(Appume.this, ContactMe.class);
-                        startActivity(newActivity);
-                        finish();
-*/
-                        break;
-
                     case 8:
-                        Toast.makeText(getApplicationContext(), "Coming soon", Toast.LENGTH_LONG).show();
-/*
-                        newActivity = new Intent(Appume.this, ContactMe.class);
-                        startActivity(newActivity);
-                        finish();
-*/
+                        launchClickListActivity(position);
                         break;
-
                 }
 
             }
@@ -121,6 +83,13 @@ public class MainActivity extends Activity {
     private void launchListActivity(int nPosition) {
         Intent intI = new Intent(this, ListActivity.class);
         intI.putExtra(ListActivity.EXTRA_POSITION, nPosition);
+        startActivity(intI);
+        finish();
+    }
+
+    private void launchClickListActivity(int nPosition) {
+        Intent intI = new Intent(this, ClickListActivity.class);
+        intI.putExtra(ClickListActivity.EXTRA_POSITION, nPosition);
         startActivity(intI);
         finish();
     }
