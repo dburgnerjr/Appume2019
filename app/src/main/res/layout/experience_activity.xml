@@ -17,22 +17,11 @@
         android:layout_centerHorizontal="true"
         android:src="@drawable/appume_banner" />
 
-    <TextView
-        android:id="@+id/activityExperienceHeader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imgBanner"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
-        android:text="Header"
-        android:textSize="32sp"
-        android:textColor="#454545" />
-
     <ScrollView
         android:id="@+id/svActivityExperience"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/activityExperienceHeader"
+        android:layout_below="@+id/imgBanner"
         android:layout_marginTop="64dp"
         android:background="#D1EEEE" >
 
@@ -41,14 +30,45 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/activityExperienceText"
+                android:id="@+id/activityExperiencePosition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="32dp"
+                android:text="Software Engineer"
+                android:textSize="20sp"
+                android:textColor="#454545" />
+
+            <TextView
+                android:id="@+id/activityExperienceTimePeriod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_centerHorizontal="true"
+                android:text="2014-2015"
+                android:layout_below="@+id/activityExperiencePosition"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/activityExperienceCompanyNameLocation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/imgLogo"
                 android:layout_alignParentBottom="true"
+                android:text="Dominion Enterprises\t\tNorfolk, VA"
+                android:layout_below="@+id/activityExperienceTimePeriod"
                 android:layout_marginBottom="0dp"
                 android:textSize="20sp"
                 android:textColor="#454545" />
+
+            <ListView
+                android:id="@+id/activityExperienceList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/activityExperienceCompanyNameLocation"
+                android:layout_centerVertical="true"
+                android:textColor="#454545" >
+            </ListView>
 
         </RelativeLayout>
     </ScrollView>
