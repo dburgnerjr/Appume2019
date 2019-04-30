@@ -84,6 +84,90 @@
         <item>Lee Ash</item>
     </string-array>
 
+    <string-array name="experience_details">
+        <item>{\"name\":{\"position\":\"Java Developer\",\"location\":\"San Antonio, TX\",\"company\":[\"Principle InfoTech\",
+            \"Frankie Friend and Associates\"],\"time_period\":[\"November 2018 to Present\",\"October 2017 to October 2018\"],
+            \"position_description\":[\"* Develop modules for an application used by the US Air Force to help over 38,000
+            civilian and military police officers perform their duties. \",\"* Transforming the application to use the Spring
+            MVC framework and support the latest version of Java.\",\"* Creating front-end validation methods using JavaScript
+            in an effort to transmit information to Spring MVC controller to facilitate storage in the database.\",\"* Skills/
+            Technologies Used: Java, Java Server Pages (JSP), Eclipse, Apache Tomcat, JavaScript, JSON, JSP Tag Libraries (JSTL),
+            AJAX, HTML, CSS, SQL, Oracle Weblogic, Spring MVC\"]}}
+        </item>
+        <item>{\"name\":{\"position\":\"Java Developer\",\"location\":\"San Antonio, TX\",\"company\":[\"Principle InfoTech\",
+            \"Frankie Friend and Associates\"],\"time_period\":[\"November 2018 to Present\",\"October 2017 to October 2018\"],
+            \"position_description\":[\"Develop modules for an application used by the US Air Force to help over 38,000
+            civilian and military police officers perform their duties. \",\"Transforming the application to use the Spring
+            MVC framework and support the latest version of Java.\",\"Creating front-end validation methods using JavaScript
+            in an effort to transmit information to Spring MVC controller to facilitate storage in the database.\",\"Skills/
+            Technologies Used: Java, Java Server Pages (JSP), Eclipse, Apache Tomcat, JavaScript, JSON, JSP Tag Libraries (JSTL),
+            AJAX, HTML, CSS, SQL, Oracle Weblogic, Spring MVC\"]}}
+        </item>
+        <item>{\"name\":{\"position\":\"Java Developer\",\"location\":\"San Antonio, TX\",\"company\":[\"Principle InfoTech\",
+            \"Frankie Friend and Associates\"],\"time_period\":[\"November 2018 to Present\",\"October 2017 to October 2018\"],
+            \"position_description\":[\"Develop modules for an application used by the US Air Force to help over 38,000
+            civilian and military police officers perform their duties. \",\"Transforming the application to use the Spring
+            MVC framework and support the latest version of Java.\",\"Creating front-end validation methods using JavaScript
+            in an effort to transmit information to Spring MVC controller to facilitate storage in the database.\",\"Skills/
+            Technologies Used: Java, Java Server Pages (JSP), Eclipse, Apache Tomcat, JavaScript, JSON, JSP Tag Libraries (JSTL),
+            AJAX, HTML, CSS, SQL, Oracle Weblogic, Spring MVC\"]}}
+        </item>
+        <item>{\"name\":{\"position\":\"Java Developer\",\"location\":\"San Antonio, TX\",\"company\":[\"Principle InfoTech\",
+            \"Frankie Friend and Associates\"],\"time_period\":[\"November 2018 to Present\",\"October 2017 to October 2018\"],
+            \"position_description\":[\"Develop modules for an application used by the US Air Force to help over 38,000
+            civilian and military police officers perform their duties. \",\"Transforming the application to use the Spring
+            MVC framework and support the latest version of Java.\",\"Creating front-end validation methods using JavaScript
+            in an effort to transmit information to Spring MVC controller to facilitate storage in the database.\",\"Skills/
+            Technologies Used: Java, Java Server Pages (JSP), Eclipse, Apache Tomcat, JavaScript, JSON, JSP Tag Libraries (JSTL),
+            AJAX, HTML, CSS, SQL, Oracle Weblogic, Spring MVC\"]}}
+        </item>
+        <item>{\"name\":{\"position\":\"Java Developer\",\"location\":\"San Antonio, TX\",\"company\":[\"Principle InfoTech\",
+            \"Frankie Friend and Associates\"],\"time_period\":[\"November 2018 to Present\",\"October 2017 to October 2018\"],
+            \"position_description\":[\"Develop modules for an application used by the US Air Force to help over 38,000
+            civilian and military police officers perform their duties. \",\"Transforming the application to use the Spring
+            MVC framework and support the latest version of Java.\",\"Creating front-end validation methods using JavaScript
+            in an effort to transmit information to Spring MVC controller to facilitate storage in the database.\",\"Skills/
+            Technologies Used: Java, Java Server Pages (JSP), Eclipse, Apache Tomcat, JavaScript, JSON, JSP Tag Libraries (JSTL),
+            AJAX, HTML, CSS, SQL, Oracle Weblogic, Spring MVC\"]}}
+        </item>
+        <item>{\"name\":{\"position\":\"Java Developer\",\"location\":\"San Antonio, TX\",\"company\":[\"Principle InfoTech\",
+            \"Frankie Friend and Associates\"],\"time_period\":[\"November 2018 to Present\",\"October 2017 to October 2018\"],
+            \"position_description\":[\"Develop modules for an application used by the US Air Force to help over 38,000
+            civilian and military police officers perform their duties. \",\"Transforming the application to use the Spring
+            MVC framework and support the latest version of Java.\",\"Creating front-end validation methods using JavaScript
+            in an effort to transmit information to Spring MVC controller to facilitate storage in the database.\",\"Skills/
+            Technologies Used: Java, Java Server Pages (JSP), Eclipse, Apache Tomcat, JavaScript, JSON, JSP Tag Libraries (JSTL),
+            AJAX, HTML, CSS, SQL, Oracle Weblogic, Spring MVC\"]}}
+        </item>
+        <item>{\"name\":{\"position\":\"Java Developer\",\"location\":\"San Antonio, TX\",\"company\":[\"Principle InfoTech\",
+            \"Frankie Friend and Associates\"],\"time_period\":[\"November 2018 to Present\",\"October 2017 to October 2018\"],
+            \"position_description\":[\"Develop modules for an application used by the US Air Force to help over 38,000
+            civilian and military police officers perform their duties. \",\"Transforming the application to use the Spring
+            MVC framework and support the latest version of Java.\",\"Creating front-end validation methods using JavaScript
+            in an effort to transmit information to Spring MVC controller to facilitate storage in the database.\",\"Skills/
+            Technologies Used: Java, Java Server Pages (JSP), Eclipse, Apache Tomcat, JavaScript, JSON, JSP Tag Libraries (JSTL),
+            AJAX, HTML, CSS, SQL, Oracle Weblogic, Spring MVC\"]}}
+        </item>
+        <item>{\"name\":{\"position\":\"Java Developer\",\"location\":\"San Antonio, TX\",\"company\":[\"Principle InfoTech\",
+            \"Frankie Friend and Associates\"],\"time_period\":[\"November 2018 to Present\",\"October 2017 to October 2018\"],
+            \"position_description\":[\"Develop modules for an application used by the US Air Force to help over 38,000
+            civilian and military police officers perform their duties. \",\"Transforming the application to use the Spring
+            MVC framework and support the latest version of Java.\",\"Creating front-end validation methods using JavaScript
+            in an effort to transmit information to Spring MVC controller to facilitate storage in the database.\",\"Skills/
+            Technologies Used: Java, Java Server Pages (JSP), Eclipse, Apache Tomcat, JavaScript, JSON, JSP Tag Libraries (JSTL),
+            AJAX, HTML, CSS, SQL, Oracle Weblogic, Spring MVC\"]}}
+        </item>
+        <item>{\"name\":{\"position\":\"Java Developer\",\"location\":\"San Antonio, TX\",\"company\":[\"Principle InfoTech\",
+            \"Frankie Friend and Associates\"],\"time_period\":[\"November 2018 to Present\",\"October 2017 to October 2018\"],
+            \"position_description\":[\"Develop modules for an application used by the US Air Force to help over 38,000
+            civilian and military police officers perform their duties. \",\"Transforming the application to use the Spring
+            MVC framework and support the latest version of Java.\",\"Creating front-end validation methods using JavaScript
+            in an effort to transmit information to Spring MVC controller to facilitate storage in the database.\",\"Skills/
+            Technologies Used: Java, Java Server Pages (JSP), Eclipse, Apache Tomcat, JavaScript, JSON, JSP Tag Libraries (JSTL),
+            AJAX, HTML, CSS, SQL, Oracle Weblogic, Spring MVC\"]}}
+        </item>
+    </string-array>
+
     <string-array name="recommendation_details">
         <item>{\"name\":{\"manager\":\"Reno McCormick\",\"recommendationText\":\"Daniel and I worked on a Java-based web
             application for about a year. In that time I found his depth of knowledge and willingness to go the extra mile

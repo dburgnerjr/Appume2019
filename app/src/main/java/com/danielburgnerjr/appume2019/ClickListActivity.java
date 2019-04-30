@@ -78,7 +78,7 @@ public class ClickListActivity extends Activity {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view,
                                             int position, long id) {
-                        Toast.makeText(getApplicationContext(), "Coming soon", Toast.LENGTH_LONG).show();
+                        launchExperienceActivity(position);
                     }
 
                 });
@@ -161,6 +161,12 @@ public class ClickListActivity extends Activity {
             return true;
         }
         return super.onKeyDown(nKeyCode, keEvent);
+    }
+
+    private void launchExperienceActivity(int position) {
+        Intent intent = new Intent(this, ExperienceActivity.class);
+        intent.putExtra(ExperienceActivity.EXTRA_POSITION, position);
+        startActivity(intent);
     }
 
     private void launchRecommendationActivity(int position) {
