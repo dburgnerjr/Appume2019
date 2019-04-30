@@ -92,7 +92,7 @@ public class ExperienceActivity extends Activity {
 
         tvPosition.setText(expE.getPosition());
         tvLocation.setText(expE.getLocation());
-        //lvCompanyTimePeriod.setAdapter(ctpCompanyNameTimePdList);
+        lvCompanyTimePeriod.setAdapter(ctpCompanyNameTimePdList);
         setListViewHeightBasedOnChildren(lvPositionDescription);
         lvPositionDescription.setAdapter(aaPositionDescription);
     }
