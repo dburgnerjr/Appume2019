@@ -16,36 +16,16 @@ public class JsonUtils {
 
         String strPosition;
         String strLocation;
-        List<String> lstCompany = null;
-        List<String> lstTimePeriod = null;
+        String strCompany = null;
+        String strTimePeriod = null;
         List<String> lstPositionDescription = null;
 
         JSONObject jsonObject = new JSONObject(json);
         JSONObject name = jsonObject.getJSONObject("name");
         strPosition = name.getString("position");
         strLocation = name.getString("location");
-
-        lstCompany = new ArrayList<String>();
-        if (name.has("company")) {
-            JSONArray jsnaCompany = name.getJSONArray("company");
-
-            //Iterate through the array of jsnaCompany and add it to list
-            for (int nI = 0; nI < jsnaCompany.length(); nI++) {
-                String strCompany = jsnaCompany.getString(nI);
-                lstCompany.add(strCompany);
-            }
-        }
-
-        lstTimePeriod = new ArrayList<String>();
-        if (name.has("time_period")) {
-            JSONArray jsnaTimePeriod = name.getJSONArray("time_period");
-
-            //Iterate through the array of jsnaTimePeriod and add it to list
-            for (int nI = 0; nI < jsnaTimePeriod.length(); nI++) {
-                String strTimePeriod = jsnaTimePeriod.getString(nI);
-                lstTimePeriod.add(strTimePeriod);
-            }
-        }
+        strCompany = name.getString("company");
+        strTimePeriod = name.getString("time_period");
 
         lstPositionDescription = new ArrayList<String>();
         if (name.has("position_description")) {
@@ -58,7 +38,7 @@ public class JsonUtils {
             }
         }
 
-        Experience expE = new Experience(strPosition, strLocation, lstCompany, lstTimePeriod, lstPositionDescription);
+        Experience expE = new Experience(strPosition, strLocation, strCompany, strTimePeriod, lstPositionDescription);
         return expE;
     }
 

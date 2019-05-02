@@ -27,7 +27,8 @@ public class ExperienceActivity extends Activity {
 
     private TextView tvPosition;
     private TextView tvLocation;
-    private ListView lvCompanyTimePeriod;
+    private TextView tvCompany;
+    private TextView tvTimePeriod;
     private ListView lvPositionDescription;
 
     @Override
@@ -35,9 +36,10 @@ public class ExperienceActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.experience_activity);
 
-        tvPosition = (TextView) findViewById(R.id.activityExperiencePosition);
-        tvLocation = (TextView) findViewById(R.id.activityExperienceLocation);
-        lvCompanyTimePeriod = findViewById(R.id.activityCompanyTimePeriodList);
+        tvPosition = findViewById(R.id.activityExperiencePosition);
+        tvLocation = findViewById(R.id.activityExperienceLocation);
+        tvCompany  = findViewById(R.id.txtCompanyName);
+        tvTimePeriod  = findViewById(R.id.txtTimePeriod);
         lvPositionDescription = findViewById(R.id.activityExperienceList);
 
         Intent intent = getIntent();
@@ -45,9 +47,9 @@ public class ExperienceActivity extends Activity {
             closeOnError();
         }
 
-        if (nPosition == DEFAULT_POSITION) {
         nPosition = intent.getIntExtra(EXTRA_POSITION, DEFAULT_POSITION);
 
+        if (nPosition == DEFAULT_POSITION) {
             // EXTRA_POSITION not found in intent
             closeOnError();
             return;
@@ -55,6 +57,7 @@ public class ExperienceActivity extends Activity {
 
         String[] strExperience = getResources().getStringArray(R.array.experience_details);
         String strJson = strExperience[nPosition];
+
         try {
             Experience expE = JsonUtils.parseExperienceJson(strJson);
             if (expE == null) {
@@ -78,21 +81,16 @@ public class ExperienceActivity extends Activity {
     }
 
     private void populateUI(Experience expE) {
-        CompanyTimePeriodAdapter ctpCompanyNameTimePdList;
         ArrayAdapter<String> aaPositionDescription;
-        List<String> strCompanyNameList;
-        List<String> strTimePeriodList;
         List<String> strExperienceDescriptionList;
 
-        strCompanyNameList = expE.getCompany();
-        strTimePeriodList = expE.getTimePeriod();
         strExperienceDescriptionList = expE.getPositionDescription();
-        ctpCompanyNameTimePdList = new CompanyTimePeriodAdapter(strCompanyNameList, strTimePeriodList);
         aaPositionDescription = new ArrayAdapter<String>(this, R.layout.list_activity_text_view, strExperienceDescriptionList);
 
         tvPosition.setText(expE.getPosition());
         tvLocation.setText(expE.getLocation());
-        lvCompanyTimePeriod.setAdapter(ctpCompanyNameTimePdList);
+        tvCompany.setText(expE.getCompany());
+        tvTimePeriod.setText(expE.getTimePeriod());
         setListViewHeightBasedOnChildren(lvPositionDescription);
         lvPositionDescription.setAdapter(aaPositionDescription);
     }

@@ -5,8 +5,8 @@ import java.util.List;
 public class Experience {
     private String strPosition;
     private String strLocation;
-    private List<String> lstCompany = null;
-    private List<String> lstTimePeriod = null;
+    private String strCompany = null;
+    private String strTimePeriod = null;
     private List<String> lstPositionDescription = null;
 
     /**
@@ -15,11 +15,11 @@ public class Experience {
     public Experience() {
     }
 
-    public Experience(String strPos, String strLoc, List<String> lstCom, List<String> lstTP, List<String> lstPD) {
+    public Experience(String strPos, String strLoc, String strCom, String strTP, List<String> lstPD) {
         this.strPosition = strPos;
         this.strLocation = strLoc;
-        this.lstCompany = lstCom;
-        this.lstTimePeriod = lstTP;
+        this.strCompany = strCom;
+        this.strTimePeriod = strTP;
         this.lstPositionDescription = lstPD;
     }
 
@@ -39,12 +39,12 @@ public class Experience {
         this.strLocation = strLoc;
     }
 
-    public List<String> getCompany() {
-        return lstCompany;
+    public String getCompany() {
+        return strCompany;
     }
 
-    public List<String> getTimePeriod() {
-        return lstTimePeriod;
+    public String getTimePeriod() {
+        return strTimePeriod;
     }
 
     public List<String> getPositionDescription() {
