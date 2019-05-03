@@ -40,12 +40,6 @@
         <item>Scaled Agile Framework (SAFe) 4 Practitioner</item>
     </string-array>
 
-    <string-array name="android_projects">
-        <item>GoodForce Demo</item>
-        <item>Popular Movies</item>
-        <item>TSA Randomizer</item>
-        <item>Flipulator</item>
-    </string-array>
 
     <string-array name="skills">
         <item>Programming Languages:  Java, JavaScript, Kotlin, PHP, Swift, C++, HTML, SQL, XML</item>
@@ -82,6 +76,41 @@
         <item>David Dennis</item>
         <item>Frank M. Bird</item>
         <item>Lee Ash</item>
+    </string-array>
+
+    <string-array name="android_projects">
+        <item>GoodForce Demo</item>
+        <item>Popular Movies</item>
+        <item>TSA Randomizer</item>
+        <item>Flipulator</item>
+    </string-array>
+
+    <string-array name="android_project_details">
+        <item>{\"name\":{\"app_name\":\"GoodForce Demo\",\"github_android_link\":\"http://www.github.com/dburgnerjr/Capstone-Project\",
+            \"play_store_link\":\"\",\"github_ios_link\":\"\",\"app_store_link\":\"\",\"app_description\":[\"* Demo version of GoodForce
+            app which will be a trivia game designed to help others pay down credit card debt, car loans, payday and personal loans.\",
+            \"* Provides user with a trivia game that will allow the user to answer questions in an effort to gain extra lives (full
+            version would allow the user to win money towards their debt).\"]}}
+        </item>
+        <item>{\"name\":{\"app_name\":\"Popular Movies\",\"github_android_link\":\"http://www.github.com/dburgnerjr/PopularMoviesGoogleUdacity\",
+            \"play_store_link\":\"\",\"github_ios_link\":\"\",\"app_store_link\":\"\",\"app_description\":[\"* Presents the user with a grid
+            arrangement of movie posters upon launch, sorted by popularity and by user rating.\",\"* Presents the user with detailed information,
+            to include backdrop, user rating, title, overview, release date, trailers and reviews.\"]}}
+        </item>
+        <item>{\"name\":{\"app_name\":\"TSA Randomizer\",\"github_android_link\":\"http://www.github.com/dburgnerjr/TSALeftOrRightFree\",
+            \"play_store_link\":\"https://play.google.com/store/apps/details?id=com.danielburgnerjr.tsaleftorrightfree\",\"github_ios_link\":
+            \"http://www.github.com/dburgnerjr/TSARandomizerIOS\",\"app_store_link\":\"\",\"app_description\":[\"* Allows the user to select
+            a button that will display a left arrow or right arrow at random based on the app used by the TSA.\",\"* Allows the user to remove
+            ads/restore purchases (iOS only) along with the ability to share the app with other users.\",\"* Completed Android version in two
+            days.\"]}}
+        </item>
+        <item>{\"name\":{\"app_name\":\"Flipulator\",\"github_android_link\":\"http://www.github.com/dburgnerjr/FlipulatorFree\",
+            \"play_store_link\":\"https://play.google.com/store/apps/details?id=com.danielburgnerjr.flipulatorfree\",\"github_ios_link\":
+            \"https://github.com/dburgnerjr/FlipulatorIOS\",\"app_store_link\":\"\",\"app_description\":[\"* Created a real estate investment
+            calculator designed to evaluate the viability of rehabbing a house to determine profitability for the real estate investor.\",
+            \"* This app displays results of whether or not a property is profitable by showing the profit, ROI, and cash on cash return and
+            can be sent to fellow investors and realtors in Excel spreadsheet format.\"]}}
+        </item>
     </string-array>
 
     <string-array name="experience_details">

@@ -11,7 +11,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.danielburgnerjr.appume2019.adapter.CompanyTimePeriodAdapter;
 import com.danielburgnerjr.appume2019.model.Experience;
 import com.danielburgnerjr.appume2019.utils.JsonUtils;
 

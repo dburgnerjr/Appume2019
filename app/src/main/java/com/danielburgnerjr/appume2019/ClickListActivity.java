@@ -62,7 +62,7 @@ public class ClickListActivity extends Activity {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view,
                                             int position, long id) {
-                        Toast.makeText(getApplicationContext(), "Coming soon", Toast.LENGTH_LONG).show();
+                        launchAndroidProjectActivity(position);
                     }
 
                 });
@@ -161,6 +161,12 @@ public class ClickListActivity extends Activity {
             return true;
         }
         return super.onKeyDown(nKeyCode, keEvent);
+    }
+
+    private void launchAndroidProjectActivity(int position) {
+        Intent intent = new Intent(this, AndroidProjectsActivity.class);
+        intent.putExtra(AndroidProjectsActivity.EXTRA_POSITION, position);
+        startActivity(intent);
     }
 
     private void launchExperienceActivity(int position) {
