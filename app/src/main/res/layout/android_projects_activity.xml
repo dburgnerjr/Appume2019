@@ -18,49 +18,10 @@
         android:src="@drawable/appume_banner" />
 
     <TextView
-        android:id="@+id/activityAndroidProjectsHeader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imgBanner"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
-        android:text="Header"
-        android:textSize="32sp"
-        android:textColor="#454545" />
-
-    <TextView
-        android:id="@+id/activityGitHubRepoAndroid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/activityAndroidProjectsHeader"
-        android:layout_marginTop="32dp"
-        android:text="GitHub Repo Android"
-        android:textSize="20sp"
-        android:textColor="#454545" />
-
-    <TextView
-        android:id="@+id/activityGooglePlayStore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/activityGitHubRepoAndroid"
-        android:text="Google Play Store Link"
-        android:textSize="20sp"
-        android:textColor="#454545" />
-
-    <TextView
-        android:id="@+id/activityGitHubRepoIOS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/activityGooglePlayStore"
-        android:text="GitHub Repo IOS"
-        android:textSize="20sp"
-        android:textColor="#454545" />
-
-    <TextView
         android:id="@+id/activityAppStore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/activityGitHubRepoIOS"
+        android:layout_below="@+id/imgBanner"
         android:text="App Store Link"
         android:textSize="20sp"
         android:textColor="#454545" />
@@ -71,4 +32,64 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/activityAppStore"
         android:textColor="#454545" />
+
+    <LinearLayout
+        android:id="@+id/llGitHub"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_above="@+id/activityAndroidProjectList"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnGitHubAndroid"
+            android:layout_width="100sp"
+            android:layout_height="50sp"
+            android:layout_weight="0.5"
+            android:text="@string/github_android"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:background="#D1EEEE"
+            android:textColor="#454545" />
+
+        <Button
+            android:id="@+id/btnGitHubiOS"
+            android:layout_width="100sp"
+            android:layout_height="50sp"
+            android:layout_weight="0.5"
+            android:text="@string/github_ios"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:background="#D1EEEE"
+            android:textColor="#454545" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llPlayAppStore"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_above="@+id/llGitHub"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnPlayStore"
+            android:layout_width="100sp"
+            android:layout_height="50sp"
+            android:layout_weight="0.5"
+            android:text="@string/play_store"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:background="#D1EEEE"
+            android:textColor="#454545" />
+
+        <Button
+            android:id="@+id/btnAppStore"
+            android:layout_width="100sp"
+            android:layout_height="50sp"
+            android:layout_weight="0.5"
+            android:text="@string/app_store"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:background="#D1EEEE"
+            android:textColor="#454545" />
+    </LinearLayout>
+
 </RelativeLayout>

@@ -11,6 +11,10 @@
     <string name="experience">Experience</string>
     <string name="recommendations">Recommendations</string>
     <string name="contactme">Contact Me</string>
+    <string name="github_android">GitHub Android</string>
+    <string name="github_ios">GitHub iOS</string>
+    <string name="play_store">Play Store</string>
+    <string name="app_store">App Store</string>
 
     <string-array name="main_menu">
         <item>What is an Appume?</item>
