@@ -18,26 +18,28 @@
         android:src="@drawable/appume_banner" />
 
     <TextView
-        android:id="@+id/activityAppStore"
+        android:id="@+id/activityAndroidProjectsHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imgBanner"
-        android:text="App Store Link"
-        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:textSize="32sp"
         android:textColor="#454545" />
 
     <ListView
         android:id="@+id/activityAndroidProjectList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/activityAppStore"
+        android:layout_below="@+id/activityAndroidProjectsHeader"
+        android:layout_marginTop="42dp"
         android:textColor="#454545" />
 
     <LinearLayout
         android:id="@+id/llGitHub"
         android:layout_width="match_parent"
         android:layout_height="50sp"
-        android:layout_above="@+id/activityAndroidProjectList"
+        android:layout_above="@+id/llPlayAppStore"
         android:orientation="horizontal" >
 
         <Button
@@ -46,7 +48,8 @@
             android:layout_height="50sp"
             android:layout_weight="0.5"
             android:text="@string/github_android"
-            android:textSize="14sp"
+            android:onClick="showGitHubAndroid"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:background="#D1EEEE"
             android:textColor="#454545" />
@@ -57,7 +60,8 @@
             android:layout_height="50sp"
             android:layout_weight="0.5"
             android:text="@string/github_ios"
-            android:textSize="14sp"
+            android:onClick="showGitHubiOS"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:background="#D1EEEE"
             android:textColor="#454545" />
@@ -66,7 +70,7 @@
         android:id="@+id/llPlayAppStore"
         android:layout_width="match_parent"
         android:layout_height="50sp"
-        android:layout_above="@+id/llGitHub"
+        android:layout_above="@+id/llBottom"
         android:orientation="horizontal" >
 
         <Button
@@ -75,7 +79,8 @@
             android:layout_height="50sp"
             android:layout_weight="0.5"
             android:text="@string/play_store"
-            android:textSize="14sp"
+            android:onClick="showPlayStore"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:background="#D1EEEE"
             android:textColor="#454545" />
@@ -86,10 +91,20 @@
             android:layout_height="50sp"
             android:layout_weight="0.5"
             android:text="@string/app_store"
-            android:textSize="14sp"
+            android:onClick="showAppStore"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:background="#D1EEEE"
             android:textColor="#454545" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
     </LinearLayout>
 
 </RelativeLayout>

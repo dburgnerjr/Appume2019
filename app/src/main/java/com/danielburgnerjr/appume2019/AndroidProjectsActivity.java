@@ -2,14 +2,16 @@ package com.danielburgnerjr.appume2019;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.danielburgnerjr.appume2019.model.AndroidProject;
-import com.danielburgnerjr.appume2019.model.Experience;
 import com.danielburgnerjr.appume2019.utils.JsonUtils;
 
 import org.json.JSONException;
@@ -23,11 +25,12 @@ public class AndroidProjectsActivity extends Activity {
     private static int nPosition;
 
     private TextView tvAppName;
-    private TextView tvGitHubAndroid;
-    private TextView tvPlayStore;
-    private TextView tvGitHubiOS;
-    private TextView tvAppStore;
+    private Button btnGitHubAndroid;
+    private Button btnPlayStore;
+    private Button btnGitHubiOS;
+    private Button btnAppStore;
     private ListView lvAppDescription;
+    private AndroidProject andAP;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,10 +38,10 @@ public class AndroidProjectsActivity extends Activity {
         setContentView(R.layout.android_projects_activity);
 
         tvAppName = findViewById(R.id.activityAndroidProjectsHeader);
-        tvGitHubAndroid = findViewById(R.id.activityGitHubRepoAndroid);
-        tvPlayStore  = findViewById(R.id.activityGooglePlayStore);
-        tvGitHubiOS  = findViewById(R.id.activityGitHubRepoIOS);
-        tvAppStore  = findViewById(R.id.activityAppStore);
+        btnGitHubAndroid = findViewById(R.id.btnGitHubAndroid);
+        btnPlayStore  = findViewById(R.id.btnPlayStore);
+        btnGitHubiOS  = findViewById(R.id.btnGitHubiOS);
+        btnAppStore  = findViewById(R.id.btnAppStore);
         lvAppDescription = findViewById(R.id.activityAndroidProjectList);
 
         Intent intent = getIntent();
@@ -58,7 +61,7 @@ public class AndroidProjectsActivity extends Activity {
         String strJson = strAndroidProject[nPosition];
 
         try {
-            AndroidProject andAP = JsonUtils.parseAndroidProjectJson(strJson);
+            andAP = JsonUtils.parseAndroidProjectJson(strJson);
             if (andAP == null) {
                 // AndroidProject data unavailable
                 closeOnError();
@@ -87,10 +90,43 @@ public class AndroidProjectsActivity extends Activity {
         aaAppDescription = new ArrayAdapter<String>(this, R.layout.list_activity_text_view, strAppDescriptionList);
 
         tvAppName.setText(andAP.getAppName());
-        tvGitHubAndroid.setText(andAP.getGitHubAndroid());
-        tvPlayStore.setText(andAP.getPlayStore());
-        tvGitHubiOS.setText(andAP.getGitHubiOS());
-        tvAppStore.setText(andAP.getAppStore());
+        //tvGitHubAndroid.setText(andAP.getGitHubAndroid());
+        //tvPlayStore.setText(andAP.getPlayStore());
+        //tvGitHubiOS.setText(andAP.getGitHubiOS());
+        //tvAppStore.setText(andAP.getAppStore());
         lvAppDescription.setAdapter(aaAppDescription);
     }
+
+    public void showGitHubAndroid(View view) {
+        Intent newActivity = new Intent(Intent.ACTION_VIEW,  Uri.parse(andAP.getGitHubAndroid()));
+        startActivity(newActivity);
+    }
+
+    public void showGitHubiOS(View view) {
+        if (andAP.getGitHubiOS().isEmpty() == false) {
+            Intent newActivity = new Intent(Intent.ACTION_VIEW, Uri.parse(andAP.getGitHubiOS()));
+            startActivity(newActivity);
+        } else {
+            Toast.makeText(this, R.string.detail_error_message, Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void showPlayStore(View view) {
+        if (andAP.getPlayStore().isEmpty() == false) {
+            Intent newActivity = new Intent(Intent.ACTION_VIEW, Uri.parse(andAP.getPlayStore()));
+            startActivity(newActivity);
+        } else {
+            Toast.makeText(this, R.string.detail_error_message, Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void showAppStore(View view) {
+        if (andAP.getAppStore().isEmpty() == false) {
+            Intent newActivity = new Intent(Intent.ACTION_VIEW, Uri.parse(andAP.getAppStore()));
+            startActivity(newActivity);
+        } else {
+            Toast.makeText(this, R.string.detail_error_message, Toast.LENGTH_SHORT).show();
+        }
+    }
+
 }
