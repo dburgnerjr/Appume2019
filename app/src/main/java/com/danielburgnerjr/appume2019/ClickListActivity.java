@@ -74,13 +74,10 @@ public class ClickListActivity extends Activity {
                 tvActivityClickListHeader.setText(R.string.experience);
                 lvActivityClickList.setAdapter(adapter);
                 lvActivityClickList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
                     @Override
-                    public void onItemClick(AdapterView<?> parent, View view,
-                                            int position, long id) {
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         launchExperienceActivity(position);
                     }
-
                 });
                 break;
 
@@ -90,13 +87,10 @@ public class ClickListActivity extends Activity {
                 tvActivityClickListHeader.setText(R.string.recommendations);
                 lvActivityClickList.setAdapter(adapter);
                 lvActivityClickList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
                     @Override
-                    public void onItemClick(AdapterView<?> parent, View view,
-                                            int position, long id) {
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         launchRecommendationActivity(position);
                     }
-
                 });
                 break;
 
@@ -106,13 +100,10 @@ public class ClickListActivity extends Activity {
                 tvActivityClickListHeader.setText(R.string.contactme);
                 lvActivityClickList.setAdapter(adapter);
                 lvActivityClickList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
                     @Override
-                    public void onItemClick(AdapterView<?> parent, View view,
-                                            int position, long id) {
-                        Toast.makeText(getApplicationContext(), "Coming soon", Toast.LENGTH_LONG).show();
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        launchContactMe(position);
                     }
-
                 });
                 break;
 
@@ -181,4 +172,8 @@ public class ClickListActivity extends Activity {
         startActivity(intent);
     }
 
+    private void launchContactMe(int position) {
+        ContactMeActivity cma = new ContactMeActivity();
+        cma.launchContactMethod(this, position);
+    }
 }

@@ -25,10 +25,6 @@ public class AndroidProjectsActivity extends Activity {
     private static int nPosition;
 
     private TextView tvAppName;
-    private Button btnGitHubAndroid;
-    private Button btnPlayStore;
-    private Button btnGitHubiOS;
-    private Button btnAppStore;
     private ListView lvAppDescription;
     private AndroidProject andAP;
 
@@ -38,10 +34,6 @@ public class AndroidProjectsActivity extends Activity {
         setContentView(R.layout.android_projects_activity);
 
         tvAppName = findViewById(R.id.activityAndroidProjectsHeader);
-        btnGitHubAndroid = findViewById(R.id.btnGitHubAndroid);
-        btnPlayStore  = findViewById(R.id.btnPlayStore);
-        btnGitHubiOS  = findViewById(R.id.btnGitHubiOS);
-        btnAppStore  = findViewById(R.id.btnAppStore);
         lvAppDescription = findViewById(R.id.activityAndroidProjectList);
 
         Intent intent = getIntent();
@@ -90,10 +82,6 @@ public class AndroidProjectsActivity extends Activity {
         aaAppDescription = new ArrayAdapter<String>(this, R.layout.list_activity_text_view, strAppDescriptionList);
 
         tvAppName.setText(andAP.getAppName());
-        //tvGitHubAndroid.setText(andAP.getGitHubAndroid());
-        //tvPlayStore.setText(andAP.getPlayStore());
-        //tvGitHubiOS.setText(andAP.getGitHubiOS());
-        //tvAppStore.setText(andAP.getAppStore());
         lvAppDescription.setAdapter(aaAppDescription);
     }
 
