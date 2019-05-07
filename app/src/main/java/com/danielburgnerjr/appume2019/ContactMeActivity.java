@@ -15,6 +15,7 @@ public class ContactMeActivity extends Activity {
     public void launchContactMethod(Context context, int position) {
         Intent newActivity;
         String strPackName = context.getApplicationContext().getPackageName();
+        String strResume;
 
         switch(position) {
             case 0:
@@ -70,7 +71,7 @@ public class ContactMeActivity extends Activity {
                 }
                 break;
 
-            case 11:
+            case 7:
                 Uri uri = Uri.parse("market://details?id=" + strPackName);
                 newActivity = new Intent(Intent.ACTION_VIEW, uri);
                 try {
@@ -80,7 +81,7 @@ public class ContactMeActivity extends Activity {
                 }
                 break;
 
-            case 12:
+            case 8:
                 try {
                     newActivity = new Intent(Intent.ACTION_SEND);
                     newActivity.setType("text/plain");

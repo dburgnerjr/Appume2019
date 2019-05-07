@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 import com.danielburgnerjr.appume2019.model.Experience;
 import com.danielburgnerjr.appume2019.utils.JsonUtils;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import java.util.List;
 
@@ -34,6 +36,9 @@ public class ExperienceActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.experience_activity);
+        AdView mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         tvPosition = findViewById(R.id.activityExperiencePosition);
         tvLocation = findViewById(R.id.activityExperienceLocation);

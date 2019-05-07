@@ -15,6 +15,7 @@
     <string name="github_ios">GitHub iOS</string>
     <string name="play_store">Play Store</string>
     <string name="app_store">App Store</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
 
     <string-array name="main_menu">
         <item>What is an Appume?</item>
@@ -229,10 +230,6 @@
         <item>Stack Overflow:  https://stackoverflow.com/users/5111305/daniel-burgner</item>
         <item>Twitter:  @dburgnerjr</item>
         <item>Google Play Store</item>
-        <item>Java Developer DOC</item>
-        <item>Java Developer PDF</item>
-        <item>Android Developer DOC</item>
-        <item>Android Developer PDF</item>
         <item>Rate This App</item>
         <item>Share This App</item>
     </string-array>

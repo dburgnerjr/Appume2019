@@ -62,6 +62,9 @@
         <activity android:name="com.danielburgnerjr.appume2019.ContactMeActivity"
             android:parentActivityName=".ClickListActivity">
         </activity>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-8379108590476103~2383340474"/>
     </application>
     <uses-permission android:name="android.permission.CALL_PHONE" />
 </manifest>
