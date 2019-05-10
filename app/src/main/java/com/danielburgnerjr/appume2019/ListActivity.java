@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 
 public class ListActivity extends Activity {
     public static final String EXTRA_POSITION = "extra_position";
@@ -19,12 +20,14 @@ public class ListActivity extends Activity {
 
     private ListView lvActivityList;
     private TextView tvActivityListHeader;
+    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_activity);
-        AdView mAdView = findViewById(R.id.adView);
+        MobileAds.initialize(this, String.valueOf(R.string.admob_app_id));
+        mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 

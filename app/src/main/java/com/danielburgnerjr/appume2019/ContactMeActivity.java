@@ -15,7 +15,6 @@ public class ContactMeActivity extends Activity {
     public void launchContactMethod(Context context, int position) {
         Intent newActivity;
         String strPackName = context.getApplicationContext().getPackageName();
-        String strResume;
 
         switch(position) {
             case 0:

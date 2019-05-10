@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 
 
 public class ClickListActivity extends Activity {
@@ -26,12 +27,14 @@ public class ClickListActivity extends Activity {
 
     private ListView lvActivityClickList;
     private TextView tvActivityClickListHeader;
+    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.click_list_activity);
-        AdView mAdView = findViewById(R.id.adView);
+        MobileAds.initialize(this, String.valueOf(R.string.admob_app_id));
+        mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 

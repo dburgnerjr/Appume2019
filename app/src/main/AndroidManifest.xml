@@ -64,7 +64,8 @@
         </activity>
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-8379108590476103~2383340474"/>
+            android:value="@string/admob_app_id"/>
     </application>
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

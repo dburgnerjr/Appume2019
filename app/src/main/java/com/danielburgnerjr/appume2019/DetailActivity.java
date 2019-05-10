@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 
 public class DetailActivity extends Activity {
     public static final String EXTRA_POSITION = "extra_position";
@@ -18,12 +19,14 @@ public class DetailActivity extends Activity {
 
     private TextView tvDetailedInfo;
     private TextView tvDetailedInfoHeader;
+    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.detail_activity);
-        AdView mAdView = findViewById(R.id.adView);
+        MobileAds.initialize(this, String.valueOf(R.string.admob_app_id));
+        mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 

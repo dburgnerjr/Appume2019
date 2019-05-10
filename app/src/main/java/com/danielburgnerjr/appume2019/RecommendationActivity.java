@@ -11,6 +11,7 @@ import com.danielburgnerjr.appume2019.model.Recommendation;
 import com.danielburgnerjr.appume2019.utils.JsonUtils;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 
 import org.json.JSONException;
 
@@ -22,12 +23,14 @@ public class RecommendationActivity extends Activity {
 
     private TextView tvManager;
     private TextView tvRecommendationText;
+    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recommendation_activity);
-        AdView mAdView = findViewById(R.id.adView);
+        MobileAds.initialize(this, String.valueOf(R.string.admob_app_id));
+        mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
