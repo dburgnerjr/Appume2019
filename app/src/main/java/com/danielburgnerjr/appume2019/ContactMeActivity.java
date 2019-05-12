@@ -28,7 +28,7 @@ public class ContactMeActivity extends Activity {
             case 1:
                 String strPhone = "tel:1-757-202-5849";
                 try {
-                    newActivity = new Intent(Intent.ACTION_CALL);
+                    newActivity = new Intent(Intent.ACTION_DIAL);
                     newActivity.setData(Uri.parse(strPhone));
                     context.startActivity(newActivity);
                 } catch (Exception e) {
