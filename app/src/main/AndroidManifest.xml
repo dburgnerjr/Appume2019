@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.danielburgnerjr.appume2019">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
-        android:allowBackup="true"
         android:icon="@drawable/ic_appume"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <!-- Splash screen -->
         <activity
             android:name="com.danielburgnerjr.appume2019.AppumeSplash"
@@ -22,6 +24,9 @@
             android:name="com.danielburgnerjr.appume2019.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/ListViewStyle" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
         </activity>
         <activity
             android:name="com.danielburgnerjr.appume2019.ListActivity"
@@ -66,6 +71,4 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="@string/admob_app_id"/>
     </application>
-    <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

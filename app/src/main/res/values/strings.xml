@@ -67,7 +67,7 @@
     </string-array>
 
     <string-array name="experience">
-        <item>Java Developer – Octpber 2017 - Present</item>
+        <item>Java Developer – Octpber 2017 - September 2019</item>
         <item>Java Developer – August 2017 - October 2017</item>
         <item>Software Systems Engineer – April 2016 – May 2017</item>
         <item>Software Engineer – October 2014 - November 2015</item>
@@ -79,6 +79,7 @@
     </string-array>
 
     <string-array name="recommendations">
+        <item>Bryan Boyd</item>
         <item>Reno McCormick</item>
         <item>David Dennis</item>
         <item>Frank M. Bird</item>
@@ -122,7 +123,7 @@
 
     <string-array name="experience_details">
         <item>{\"name\":{\"position\":\"Java Developer\",\"location\":\"San Antonio, TX\",\"company\":
-            \"Principle InfoTech\nFrankie Friend and Associates\",\"time_period\":\"November 2018 to Present\nOctober 2017 to
+            \"Principle InfoTech\nFrankie Friend and Associates\",\"time_period\":\"November 2018 to September 2019\nOctober 2017 to
             October 2018\",\"position_description\":[\"* Develop modules for an application used by the US Air Force to help
             over 38,000 civilian and military police officers perform their duties. \",\"* Transforming the application to
             use the SpringMVC framework and support the latest version of Java.\",\"* Creating front-end validation methods
@@ -195,7 +196,15 @@
     </string-array>
 
     <string-array name="recommendation_details">
-        <item>{\"name\":{\"manager\":\"Reno McCormick\",\"recommendationText\":\"Daniel and I worked on a Java-based web
+        <item>
+            {\"name\":{\"manager\":\"Bryan Boyd\",\"recommendationText\":\"I met Daniel a little over a year ago though
+            Udacity\'s Grow with Google scholarship program and he\'s truly as good as they come in our profession. In addition
+            to his personal growth over this time, I also have seen him make great strides as a developer through various
+            coding challenges and personal projects. For any recruiters looking to fill a role, definitely reach out to Him as
+            he will be an invaluable addition to your company!\"}}
+        </item>
+        <item>
+            {\"name\":{\"manager\":\"Reno McCormick\",\"recommendationText\":\"Daniel and I worked on a Java-based web
             application for about a year. In that time I found his depth of knowledge and willingness to go the extra mile
             to be of extreme importance to the success of our project. Daniel identified and corrected several hundred
             deprecated Java classes, and helped to improve the performance of the web application. He was a valued employee,
@@ -226,7 +235,7 @@
 
     <string-array name="contact_me">
         <item>Email Address:  dburgnerjr@yahoo.com</item>
-        <item>Phone Number:  1-757-202-5849</item>
+        <item>Phone Number:  1&#8211;757&#8211;202&#8211;5849</item>
         <item>LinkedIn:  https://www.linkedin.com/in/dburgnerjr</item>
         <item>GitHub:  https://www.github.com/dburgnerjr</item>
         <item>Stack Overflow:  https://stackoverflow.com/users/5111305/daniel-burgner</item>
