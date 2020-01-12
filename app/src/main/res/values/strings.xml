@@ -35,7 +35,7 @@
     It is an innovative way for me to showcase my skills and experience in an effort to land me
     a job as a mobile developer.</string>
 
-    <string name="whoamidetail">I am a software engineer with eight years development experience
+    <string name="whoamidetail">I am a software engineer with nine years development experience
     supporting military, governmental and commercial programs including the design, development, and
     integration of computer software programs. A graduate of the Udacity Android Developer nanodegree
     program, I am looking to pivot into the mobile development space as either an Android or iOS
@@ -67,6 +67,7 @@
     </string-array>
 
     <string-array name="experience">
+        <item>Software Engineer – November 2019 - Present</item>
         <item>Java Developer – Octpber 2017 - September 2019</item>
         <item>Java Developer – August 2017 - October 2017</item>
         <item>Software Systems Engineer – April 2016 – May 2017</item>
@@ -103,7 +104,8 @@
         <item>{\"name\":{\"app_name\":\"Popular Movies\",\"github_android_link\":\"http://www.github.com/dburgnerjr/PopularMoviesGoogleUdacity\",
             \"play_store_link\":\"\",\"github_ios_link\":\"\",\"app_store_link\":\"\",\"app_description\":[\"* Presents the user with a grid
             arrangement of movie posters upon launch, sorted by popularity and by user rating.\",\"* Presents the user with detailed information,
-            to include backdrop, user rating, title, overview, release date, trailers and reviews.\"]}}
+            to include backdrop, user rating, title, overview, release date, trailers and reviews.\",\"* Created two other versions that presents
+            TV show detailed information, one in Java with another in Kotlin.\"]}}
         </item>
         <item>{\"name\":{\"app_name\":\"TSA Randomizer\",\"github_android_link\":\"http://www.github.com/dburgnerjr/TSALeftOrRightFree\",
             \"play_store_link\":\"https://play.google.com/store/apps/details?id=com.danielburgnerjr.tsaleftorrightfree\",\"github_ios_link\":
@@ -117,11 +119,20 @@
             \"https://github.com/dburgnerjr/FlipulatorIOS\",\"app_store_link\":\"\",\"app_description\":[\"* Created a real estate investment
             calculator designed to evaluate the viability of rehabbing a house to determine profitability for the real estate investor.\",
             \"* This app displays results of whether or not a property is profitable by showing the profit, ROI, and cash on cash return and
-            can be sent to fellow investors and realtors in Excel spreadsheet format.\"]}}
+            can be sent to fellow investors and realtors in Excel spreadsheet format.\",\"* Refactored app using Android Studio as the IDE
+            and Kotlin as the language.\"]}}
         </item>
     </string-array>
 
     <string-array name="experience_details">
+        <item>{\"name\":{\"position\":\"Software Engineer\",\"location\":\"San Antonio, TX\",\"company\":
+            \"Insight Global\",\"time_period\":\"November 2019 to Present\",\"position_description\":[\"* Developing modules
+            for an application used by the end client to help millions of customers perform transactions.\",\"* Transforming
+            legacy applications to use the latest technologies available such as Spring Boot and Angular.\",\"* Participated
+            in multiple code reviews and provided timely feedback to multiple developers.\",\"* Skills/Technologies Used: Java,
+            Java Server Pages, Eclipse, Apache Tomcat, JavaScript, JSON, JQuery, Angular, HTML, CSS, SQL, MySQL, Spring MVC,
+            Spring Boot, Maven\"]}}
+        </item>
         <item>{\"name\":{\"position\":\"Java Developer\",\"location\":\"San Antonio, TX\",\"company\":
             \"Principle InfoTech\nFrankie Friend and Associates\",\"time_period\":\"November 2018 to September 2019\nOctober 2017 to
             October 2018\",\"position_description\":[\"* Develop modules for an application used by the US Air Force to help
