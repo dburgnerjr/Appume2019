@@ -17,10 +17,10 @@ public class JsonUtils {
 
         String strAppName;
         String strGitHubAndroid;
-        String strPlayStore = null;
-        String strGitHubiOS = null;
-        String strAppStore = null;
-        List<String> lstAppDescription = null;
+        String strPlayStore;
+        String strGitHubiOS;
+        String strAppStore;
+        List<String> lstAppDescription;
 
         JSONObject jsonObject = new JSONObject(json);
         JSONObject name = jsonObject.getJSONObject("name");
@@ -30,7 +30,7 @@ public class JsonUtils {
         strGitHubiOS = name.getString("github_ios_link");
         strAppStore = name.getString("app_store_link");
 
-        lstAppDescription = new ArrayList<String>();
+        lstAppDescription = new ArrayList<>();
         if (name.has("app_description")) {
             JSONArray jsnaAppDescription = name.getJSONArray("app_description");
 
@@ -41,17 +41,16 @@ public class JsonUtils {
             }
         }
 
-        AndroidProject andAP = new AndroidProject(strAppName, strGitHubAndroid, strPlayStore, strGitHubiOS, strAppStore, lstAppDescription);
-        return andAP;
+        return new AndroidProject(strAppName, strGitHubAndroid, strPlayStore, strGitHubiOS, strAppStore, lstAppDescription);
     }
 
     public static Experience parseExperienceJson(String json) throws JSONException {
 
         String strPosition;
         String strLocation;
-        String strCompany = null;
-        String strTimePeriod = null;
-        List<String> lstPositionDescription = null;
+        String strCompany;
+        String strTimePeriod;
+        List<String> lstPositionDescription;
 
         JSONObject jsonObject = new JSONObject(json);
         JSONObject name = jsonObject.getJSONObject("name");
@@ -60,7 +59,7 @@ public class JsonUtils {
         strCompany = name.getString("company");
         strTimePeriod = name.getString("time_period");
 
-        lstPositionDescription = new ArrayList<String>();
+        lstPositionDescription = new ArrayList<>();
         if (name.has("position_description")) {
             JSONArray jsnaPositionDescription = name.getJSONArray("position_description");
 
@@ -71,8 +70,7 @@ public class JsonUtils {
             }
         }
 
-        Experience expE = new Experience(strPosition, strLocation, strCompany, strTimePeriod, lstPositionDescription);
-        return expE;
+        return new Experience(strPosition, strLocation, strCompany, strTimePeriod, lstPositionDescription);
     }
 
     public static Recommendation parseRecommendationJson(String json) throws JSONException {
@@ -85,7 +83,6 @@ public class JsonUtils {
         strManager = name.getString("manager");
         strRecommendationText = name.getString("recommendationText");
 
-        Recommendation recR = new Recommendation(strManager, strRecommendationText);
-        return recR;
+        return new Recommendation(strManager, strRecommendationText);
     }
 }
