@@ -15,6 +15,13 @@
     <string name="github_ios">GitHub iOS</string>
     <string name="play_store">Play Store</string>
     <string name="app_store">App Store</string>
+    <string name="banner">Banner</string>
+    <string name="header">Header</string>
+    <string name="logo">Logo</string>
+    <string name="position">Position</string>
+    <string name="location">Location</string>
+    <string name="company">Company</string>
+    <string name="timePeriod">Time Period</string>
     <string name="banner_ad_unit_id_test">ca-app-pub-3940256099942544/6300978111</string>
     <string name="banner_ad_unit_id_prod">ca-app-pub-8379108590476103/8182462061</string>
     <string name="admob_app_id">ca-app-pub-8379108590476103~2383340474</string>
@@ -51,8 +58,8 @@
     <string-array name="skills">
         <item>Programming Languages:  Java, JavaScript, Kotlin, PHP, Swift, C++, HTML, SQL, XML</item>
         <item>Integrated Development Environments:  Eclipse, NetBeans, Android Studio, Xcode</item>
-        <item>Frameworks:  JQuery, JavaScript Object Notation (JSON), Java Server Pages (JSP),
-            Hibernate, Java Server Pages Standard Tag Libraries (JSTL), Spring MVC</item>
+        <item>Frameworks:  JQuery, JavaScript Object Notation (JSON), Angular, Java Server Pages (JSP),
+            Hibernate, Java Server Pages Standard Tag Libraries (JSTL), Spring MVC, Spring Boot</item>
         <item>Databases:  Oracle, MySQL, MongoDB, SQLite</item>
         <item>Version Control:  GitHub, Subversion, Atlassian, CVS</item>
     </string-array>
@@ -67,7 +74,7 @@
     </string-array>
 
     <string-array name="experience">
-        <item>Software Engineer – November 2019 - Present</item>
+        <item>Software Engineer – November 2019 - January 2020</item>
         <item>Java Developer – Octpber 2017 - September 2019</item>
         <item>Java Developer – August 2017 - October 2017</item>
         <item>Software Systems Engineer – April 2016 – May 2017</item>
@@ -126,8 +133,8 @@
 
     <string-array name="experience_details">
         <item>{\"name\":{\"position\":\"Software Engineer\",\"location\":\"San Antonio, TX\",\"company\":
-            \"Insight Global\",\"time_period\":\"November 2019 to Present\",\"position_description\":[\"* Developing modules
-            for an application used by the end client to help millions of customers perform transactions.\",\"* Transforming
+            \"Insight Global\",\"time_period\":\"November 2019 to January 2020\",\"position_description\":[\"* Developed modules
+            for an application used by the end client to help millions of customers perform transactions.\",\"* Transformed
             legacy applications to use the latest technologies available such as Spring Boot and Angular.\",\"* Participated
             in multiple code reviews and provided timely feedback to multiple developers.\",\"* Skills/Technologies Used: Java,
             Java Server Pages, Eclipse, Apache Tomcat, JavaScript, JSON, JQuery, Angular, HTML, CSS, SQL, MySQL, Spring MVC,

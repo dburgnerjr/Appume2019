@@ -5,16 +5,10 @@ import java.util.List;
 public class AndroidProject {
     private String strAppName;
     private String strGitHubAndroid;
-    private String strPlayStore = null;
-    private String strGitHubiOS = null;
-    private String strAppStore = null;
-    private List<String> lstAppDescription = null;
-
-    /**
-     * No args constructor for use in serialization
-     */
-    public AndroidProject() {
-    }
+    private String strPlayStore;
+    private String strGitHubiOS;
+    private String strAppStore;
+    private List<String> lstAppDescription;
 
     public AndroidProject(String strApp, String strGHA, String strPS, String strGHI, String strAS, List<String> lstAD) {
         this.strAppName = strApp;
@@ -29,16 +23,8 @@ public class AndroidProject {
         return strAppName;
     }
 
-    public void setAppName(String strApp) {
-        this.strAppName = strApp;
-    }
-
     public String getGitHubAndroid() {
         return strGitHubAndroid;
-    }
-
-    public void setGitHubAndroid(String strGHA) {
-        this.strGitHubAndroid = strGHA;
     }
 
     public String getPlayStore() {

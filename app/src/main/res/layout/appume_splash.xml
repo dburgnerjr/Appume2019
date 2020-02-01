@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
+        android:contentDescription="@string/banner"
         android:src="@drawable/appume_banner" />
 
     <ImageView
@@ -21,6 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:contentDescription="@string/logo"
         android:src="@drawable/ic_appumelogo" />
 
 </RelativeLayout>

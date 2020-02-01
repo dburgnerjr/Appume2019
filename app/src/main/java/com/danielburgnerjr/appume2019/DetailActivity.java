@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
-import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,11 +14,11 @@ import com.google.android.gms.ads.MobileAds;
 public class DetailActivity extends Activity {
     public static final String EXTRA_POSITION = "extra_position";
     private static final int DEFAULT_POSITION = -1;
-    private static int nPosition;
+    static int nPosition;
 
     private TextView tvDetailedInfo;
     private TextView tvDetailedInfoHeader;
-    private AdView mAdView;
+    AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

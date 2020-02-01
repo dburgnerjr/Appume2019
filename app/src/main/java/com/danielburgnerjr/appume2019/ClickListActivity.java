@@ -23,11 +23,11 @@ import com.google.android.gms.ads.MobileAds;
 public class ClickListActivity extends Activity {
     public static final String EXTRA_POSITION = "extra_position";
     private static final int DEFAULT_POSITION = -1;
-    private static int nPosition;
+    static int nPosition;
 
     private ListView lvActivityClickList;
     private TextView tvActivityClickListHeader;
-    private AdView mAdView;
+    AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,7 +116,6 @@ public class ClickListActivity extends Activity {
                     }
                 });
                 break;
-
         }
         setListViewHeightBasedOnChildren(lvActivityClickList);
     }
@@ -154,11 +153,8 @@ public class ClickListActivity extends Activity {
     }
 
     public boolean onKeyDown(int nKeyCode, KeyEvent keEvent) {
-        //String strBackMessage = "Press Who Am I? to go to the previous screen, ";
-        //strBackMessage += "Skills to go to the next screen or Main Menu to return to main menu.";
         if (nKeyCode == KeyEvent.KEYCODE_BACK) {
             mainMenu();
-            //Toast.makeText(getApplicationContext(), strBackMessage, Toast.LENGTH_SHORT).show();
             return true;
         }
         return super.onKeyDown(nKeyCode, keEvent);

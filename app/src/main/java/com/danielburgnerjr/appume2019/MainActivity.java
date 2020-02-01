@@ -2,17 +2,12 @@ package com.danielburgnerjr.appume2019;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.view.KeyEvent;
-import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -20,8 +15,8 @@ import com.google.android.gms.ads.MobileAds;
 
 public class MainActivity extends Activity {
 
-    private ListView lvView;
-    private AdView mAdView;
+    ListView lvView;
+    AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +30,7 @@ public class MainActivity extends Activity {
         String[] strMainMenu = getResources().getStringArray(R.array.main_menu);
 
         // Get ListView object from xml
-        lvView = (ListView) findViewById(R.id.appumeList);
+        lvView = findViewById(R.id.appumeList);
 
         // Define a new Adapter
         // First parameter - Context
@@ -101,38 +96,5 @@ public class MainActivity extends Activity {
         intI.putExtra(ClickListActivity.EXTRA_POSITION, nPosition);
         startActivity(intI);
         finish();
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        //getMenuInflater().inflate(R.menu.appume, menu);
-        return true;
-    }
-
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            exitByBackKey();
-            return true;
-        }
-        return super.onKeyDown(keyCode, event);
-    }
-
-    protected void exitByBackKey() {
-        AlertDialog adAlertBox = new AlertDialog.Builder(this)
-                .setMessage("Do you want to exit application?")
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    // do something when the button is clicked
-                    public void onClick(DialogInterface arg0, int arg1) {
-                        finish();
-                        //close();
-                    }
-                })
-                .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    // do something when the button is clicked
-                    public void onClick(DialogInterface arg0, int arg1) {
-                    }
-                })
-                .show();
     }
 }

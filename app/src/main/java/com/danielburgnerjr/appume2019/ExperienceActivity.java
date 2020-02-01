@@ -25,14 +25,14 @@ public class ExperienceActivity extends Activity {
 
     public static final String EXTRA_POSITION = "extra_position";
     private static final int DEFAULT_POSITION = -1;
-    private static int nPosition;
+    static int nPosition;
 
     private TextView tvPosition;
     private TextView tvLocation;
     private TextView tvCompany;
     private TextView tvTimePeriod;
     private ListView lvPositionDescription;
-    private AdView mAdView;
+    AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,11 +50,10 @@ public class ExperienceActivity extends Activity {
         lvPositionDescription = findViewById(R.id.activityExperienceList);
 
         Intent intent = getIntent();
-        if (intent == null) {
+        if (intent == null)
             closeOnError();
-        }
-
-        nPosition = intent.getIntExtra(EXTRA_POSITION, DEFAULT_POSITION);
+        else
+            nPosition = intent.getIntExtra(EXTRA_POSITION, DEFAULT_POSITION);
 
         if (nPosition == DEFAULT_POSITION) {
             // EXTRA_POSITION not found in intent
@@ -67,15 +66,7 @@ public class ExperienceActivity extends Activity {
 
         try {
             Experience expE = JsonUtils.parseExperienceJson(strJson);
-            if (expE == null) {
-                // Experience data unavailable
-                closeOnError();
-                return;
-            }
-
             populateUI(expE);
-
-
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -92,7 +83,7 @@ public class ExperienceActivity extends Activity {
         List<String> strExperienceDescriptionList;
 
         strExperienceDescriptionList = expE.getPositionDescription();
-        aaPositionDescription = new ArrayAdapter<String>(this, R.layout.list_activity_text_view, strExperienceDescriptionList);
+        aaPositionDescription = new ArrayAdapter<>(this, R.layout.list_activity_text_view, strExperienceDescriptionList);
 
         tvPosition.setText(expE.getPosition());
         tvLocation.setText(expE.getLocation());

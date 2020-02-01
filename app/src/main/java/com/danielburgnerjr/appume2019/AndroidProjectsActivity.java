@@ -6,7 +6,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,12 +24,12 @@ public class AndroidProjectsActivity extends Activity {
 
     public static final String EXTRA_POSITION = "extra_position";
     private static final int DEFAULT_POSITION = -1;
-    private static int nPosition;
+    static int nPosition;
 
     private TextView tvAppName;
     private ListView lvAppDescription;
     private AndroidProject andAP;
-    private AdView mAdView;
+    AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,11 +44,10 @@ public class AndroidProjectsActivity extends Activity {
         lvAppDescription = findViewById(R.id.activityAndroidProjectList);
 
         Intent intent = getIntent();
-        if (intent == null) {
+        if (intent == null)
             closeOnError();
-        }
-
-        nPosition = intent.getIntExtra(EXTRA_POSITION, DEFAULT_POSITION);
+        else
+            nPosition = intent.getIntExtra(EXTRA_POSITION, DEFAULT_POSITION);
 
         if (nPosition == DEFAULT_POSITION) {
             // EXTRA_POSITION not found in intent
@@ -62,15 +60,7 @@ public class AndroidProjectsActivity extends Activity {
 
         try {
             andAP = JsonUtils.parseAndroidProjectJson(strJson);
-            if (andAP == null) {
-                // AndroidProject data unavailable
-                closeOnError();
-                return;
-            }
-
             populateUI(andAP);
-
-
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -87,7 +77,7 @@ public class AndroidProjectsActivity extends Activity {
         List<String> strAppDescriptionList;
 
         strAppDescriptionList = andAP.getAppDescription();
-        aaAppDescription = new ArrayAdapter<String>(this, R.layout.list_activity_text_view, strAppDescriptionList);
+        aaAppDescription = new ArrayAdapter<>(this, R.layout.list_activity_text_view, strAppDescriptionList);
 
         tvAppName.setText(andAP.getAppName());
         lvAppDescription.setAdapter(aaAppDescription);
@@ -99,7 +89,7 @@ public class AndroidProjectsActivity extends Activity {
     }
 
     public void showGitHubiOS(View view) {
-        if (andAP.getGitHubiOS().isEmpty() == false) {
+        if (!andAP.getGitHubiOS().isEmpty()) {
             Intent newActivity = new Intent(Intent.ACTION_VIEW, Uri.parse(andAP.getGitHubiOS()));
             startActivity(newActivity);
         } else {
@@ -108,7 +98,7 @@ public class AndroidProjectsActivity extends Activity {
     }
 
     public void showPlayStore(View view) {
-        if (andAP.getPlayStore().isEmpty() == false) {
+        if (!andAP.getPlayStore().isEmpty()) {
             Intent newActivity = new Intent(Intent.ACTION_VIEW, Uri.parse(andAP.getPlayStore()));
             startActivity(newActivity);
         } else {
@@ -117,7 +107,7 @@ public class AndroidProjectsActivity extends Activity {
     }
 
     public void showAppStore(View view) {
-        if (andAP.getAppStore().isEmpty() == false) {
+        if (!andAP.getAppStore().isEmpty()) {
             Intent newActivity = new Intent(Intent.ACTION_VIEW, Uri.parse(andAP.getAppStore()));
             startActivity(newActivity);
         } else {

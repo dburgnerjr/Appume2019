@@ -19,11 +19,11 @@ public class RecommendationActivity extends Activity {
 
     public static final String EXTRA_POSITION = "extra_position";
     private static final int DEFAULT_POSITION = -1;
-    private static int nPosition;
+    static int nPosition;
 
     private TextView tvManager;
     private TextView tvRecommendationText;
-    private AdView mAdView;
+    AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,11 +38,10 @@ public class RecommendationActivity extends Activity {
         tvRecommendationText = findViewById(R.id.activityRecommendationText);
 
         Intent intent = getIntent();
-        if (intent == null) {
+        if (intent == null)
             closeOnError();
-        }
-
-        nPosition = intent.getIntExtra(EXTRA_POSITION, DEFAULT_POSITION);
+        else
+            nPosition = intent.getIntExtra(EXTRA_POSITION, DEFAULT_POSITION);
 
         if (nPosition == DEFAULT_POSITION) {
             // EXTRA_POSITION not found in intent
@@ -54,14 +53,7 @@ public class RecommendationActivity extends Activity {
         String strJson = strRecommendations[nPosition];
         try {
             Recommendation recR = JsonUtils.parseRecommendationJson(strJson);
-            if (recR == null) {
-                // Recommendation data unavailable
-                closeOnError();
-                return;
-            }
-
             populateUI(recR);
-
         } catch (JSONException e) {
             e.printStackTrace();
         }
