@@ -3,9 +3,6 @@ package com.danielburgnerjr.appume2019;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -44,37 +41,29 @@ public class MainActivity extends Activity {
         lvView.setAdapter(adapter);
 
         // ListView Item Click Listener
+        lvView.setOnItemClickListener((parent, view, position, id) -> {
 
-        lvView.setOnItemClickListener(new OnItemClickListener() {
+            switch(position) {
+                case 0:
+                case 1:
+                    launchDetailActivity(position);
+                    break;
 
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
+                case 2:
+                case 4:
+                case 5:
+                    launchListActivity(position);
+                    break;
 
-                switch(position) {
-                    case 0:
-                    case 1:
-                        launchDetailActivity(position);
-                        break;
-
-                    case 2:
-                    case 4:
-                    case 5:
-                        launchListActivity(position);
-                        break;
-
-                    case 3:
-                    case 6:
-                    case 7:
-                    case 8:
-                        launchClickListActivity(position);
-                        break;
-                }
-
+                case 3:
+                case 6:
+                case 7:
+                case 8:
+                    launchClickListActivity(position);
+                    break;
             }
 
         });
-
     }
 
     private void launchDetailActivity(int nPosition) {

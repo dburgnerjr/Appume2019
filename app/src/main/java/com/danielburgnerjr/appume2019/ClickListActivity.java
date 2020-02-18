@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.View.MeasureSpec;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -67,15 +66,7 @@ public class ClickListActivity extends Activity {
                 adapter = new ArrayAdapter<>(this, R.layout.list_activity_text_view, strActivityList);
                 tvActivityClickListHeader.setText(R.string.androidprojects);
                 lvActivityClickList.setAdapter(adapter);
-                lvActivityClickList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View view,
-                                            int position, long id) {
-                        launchAndroidProjectActivity(position);
-                    }
-
-                });
+                lvActivityClickList.setOnItemClickListener((parent, view, position, id) -> launchAndroidProjectActivity(position));
                 break;
 
             case 6:
@@ -83,12 +74,7 @@ public class ClickListActivity extends Activity {
                 adapter = new ArrayAdapter<>(this, R.layout.list_activity_text_view, strActivityList);
                 tvActivityClickListHeader.setText(R.string.experience);
                 lvActivityClickList.setAdapter(adapter);
-                lvActivityClickList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        launchExperienceActivity(position);
-                    }
-                });
+                lvActivityClickList.setOnItemClickListener((parent, view, position, id) -> launchExperienceActivity(position));
                 break;
 
             case 7:
@@ -96,12 +82,7 @@ public class ClickListActivity extends Activity {
                 adapter = new ArrayAdapter<>(this, R.layout.list_activity_text_view, strActivityList);
                 tvActivityClickListHeader.setText(R.string.recommendations);
                 lvActivityClickList.setAdapter(adapter);
-                lvActivityClickList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        launchRecommendationActivity(position);
-                    }
-                });
+                lvActivityClickList.setOnItemClickListener((parent, view, position, id) -> launchRecommendationActivity(position));
                 break;
 
             case 8:
@@ -109,12 +90,7 @@ public class ClickListActivity extends Activity {
                 adapter = new ArrayAdapter<>(this, R.layout.list_activity_text_view, strActivityList);
                 tvActivityClickListHeader.setText(R.string.contactme);
                 lvActivityClickList.setAdapter(adapter);
-                lvActivityClickList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        launchContactMe(position);
-                    }
-                });
+                lvActivityClickList.setOnItemClickListener((parent, view, position, id) -> launchContactMe(position));
                 break;
         }
         setListViewHeightBasedOnChildren(lvActivityClickList);

@@ -76,11 +76,8 @@ public class DetailActivity extends Activity {
     }
 
     public boolean onKeyDown(int nKeyCode, KeyEvent keEvent) {
-        //String strBackMessage = "Press Who Am I? to go to the previous screen, ";
-        //strBackMessage += "Skills to go to the next screen or Main Menu to return to main menu.";
         if (nKeyCode == KeyEvent.KEYCODE_BACK) {
             mainMenu();
-            //Toast.makeText(getApplicationContext(), strBackMessage, Toast.LENGTH_SHORT).show();
             return true;
         }
         return super.onKeyDown(nKeyCode, keEvent);
