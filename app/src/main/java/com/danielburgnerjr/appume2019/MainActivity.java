@@ -2,7 +2,10 @@ package com.danielburgnerjr.appume2019;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.view.KeyEvent;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -85,5 +88,23 @@ public class MainActivity extends Activity {
         intI.putExtra(ClickListActivity.EXTRA_POSITION, nPosition);
         startActivity(intI);
         finish();
+    }
+
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            exitByBackKey();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+    protected void exitByBackKey() {
+        AlertDialog adAlertBox = new AlertDialog.Builder(this).create();
+        adAlertBox.setMessage("Do you want to exit application?");
+        // do something when the button is clicked
+        adAlertBox.setButton(DialogInterface.BUTTON_POSITIVE,"Yes", (arg0, arg1) -> finish());
+        // do something when the button is clicked
+        adAlertBox.setButton(DialogInterface.BUTTON_NEGATIVE,"No", (arg0, arg1) -> { });
+        adAlertBox.show();
     }
 }
