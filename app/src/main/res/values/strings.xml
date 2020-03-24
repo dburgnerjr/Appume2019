@@ -74,6 +74,7 @@
     </string-array>
 
     <string-array name="experience">
+        <item>Developer – March 2020 - Present</item>
         <item>Software Engineer – November 2019 - January 2020</item>
         <item>Java Developer – Octpber 2017 - September 2019</item>
         <item>Java Developer – August 2017 - October 2017</item>
@@ -132,6 +133,9 @@
     </string-array>
 
     <string-array name="experience_details">
+        <item>{\"name\":{\"position\":\"Developer\",\"location\":\"Austin, TX\",\"company\":
+            \"Tata Consultancy Services\",\"time_period\":\"March 2020 to Present\",\"position_description\":[\"\",\"\",\"\",\""]}}
+        </item>
         <item>{\"name\":{\"position\":\"Software Engineer\",\"location\":\"San Antonio, TX\",\"company\":
             \"Insight Global\",\"time_period\":\"November 2019 to January 2020\",\"position_description\":[\"* Developed modules
             for an application used by the end client to help millions of customers perform transactions.\",\"* Transformed
